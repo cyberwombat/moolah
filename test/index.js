@@ -54,6 +54,10 @@ describe('MiniMath library', function() {
     expect(moolah.in(50).by(2).out()).to.eql(parseFloat(25));
   });
 
+  it('should handle non number', function() {
+    expect(moolah.in(NaN).out()).to.eql(0);
+  });
+
   it('should output as a string', function() {
     expect(moolah.in(0.3).less(0.1).toString()).to.eql('0.20');
   });

@@ -1,0 +1,32 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'version',
+1 verbose cli   'patch',
+1 verbose cli   '-m',
+1 verbose cli   'Alllow empty init' ]
+2 info using npm@2.5.1
+3 info using node@v0.10.28
+4 verbose node symlink /usr/local/bin/node
+5 info git [ 'status', '--porcelain' ]
+6 verbose stack Error: Git working directory not clean.
+6 verbose stack M lib/index.js
+6 verbose stack M test/index.js
+6 verbose stack     at /usr/local/lib/node_modules/npm/lib/version.js:138:37
+6 verbose stack     at ChildProcess.exithandler (child_process.js:645:7)
+6 verbose stack     at ChildProcess.EventEmitter.emit (events.js:98:17)
+6 verbose stack     at maybeClose (child_process.js:753:16)
+6 verbose stack     at Socket.<anonymous> (child_process.js:966:11)
+6 verbose stack     at Socket.EventEmitter.emit (events.js:95:17)
+6 verbose stack     at Pipe.close (net.js:465:12)
+7 verbose cwd /Users/Yashua/Code/Personal/Moolah
+8 error Darwin 14.1.0
+9 error argv "node" "/usr/local/bin/npm" "version" "patch" "-m" "Alllow empty init"
+10 error node v0.10.28
+11 error npm  v2.5.1
+12 error Git working directory not clean.
+12 error M lib/index.js
+12 error M test/index.js
+13 error If you need help, you may report this error at:
+13 error     <http://github.com/npm/npm/issues>
+14 verbose exit [ 1, true ]
