@@ -6,41 +6,42 @@ Moolah is a super simple math library specifically created for handling basic cu
 - Provides simple routines for basic calculations, discounts, repeatable totalling etc
 - 0.1 + 0.2 = 0.3
 
+*Note:* This is an evolving work in progress. API likely to change.
 
 ## API
 
 ```js
 var moolah = require('moolah');
 
-// Initialize and just output
-moolah.in(50).out(); // 50
+// Initialize and just output as 2 dec rounded float
+moolah(0.3333).float(); // 0.33
+
+// Initialize and just output as 2 dec string
+moolah(0.3333).string(); // '0.33'
 
 // Add
-moolah.in(0.1).plus(0.2).out(); // 0.3
+moolah(0.1).plus(0.2).float(); // 0.3
 
 // Subtract
-moolah.in(0.3).less(0.1).out(); // 0.2
+moolah(0.3).less(0.1).float(); // 0.2
 
 // Multiply
-moolah.in(50).times(2).out(); // 100
+moolah(50).times(2).float(); // 100
 
 // Divide
-moolah.in(100).by(2).out(); // 50
+moolah(100).by(2).float(); // 50
 
 // Return percentage left over
-moolah.in(50).discount(20).out(); // 40
+moolah(50).discount(20).float(); // 40
 
 // Return percentage left over using decimal
-moolah.in(50).discount(0.2).out(); // 40
+moolah(50).discount(0.2).float(); // 40
 
 // Return percentage discount
-moolah.in(50).percent(20).out(); // 10
+moolah(50).percent(20).float(); // 10
 
 // Return percentage discount using decimal
-moolah.in(50).percent(0.2).out(); // 10
-
-// Output as a 2 decimal places string
-moolah.in(50.2).toString(); // '50.20'
+moolah(50).percent(0.2).float(); // 10
 
 // Process array of items and return total (initialized with 10)
 var items = [
@@ -48,6 +49,6 @@ var items = [
  { cost: 100, qty: 2 }
  ];
 var total = moolah.reduce(items, function(m, item) {
-  return m.in(item.cost).times(item.qty);
-}, 10).out();  // 345
+  return m(item.cost).times(item.qty);
+}, 10).float();  // 345
 ```
