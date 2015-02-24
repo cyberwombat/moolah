@@ -58,7 +58,15 @@ describe('MiniMath library', function() {
     expect(moolah.in(NaN).out()).to.eql(0);
   });
 
-  it('should output as a string', function() {
+  it('should convert/output as a 2 decimal places float', function() {
+    expect(moolah.float(0.33333)).to.eql(0.33);
+  });
+
+  it('should convert/output as a string', function() {
+    expect(moolah.string(0.2011)).to.eql('0.20');
+  });
+
+  it('should handle toString', function() {
     expect(moolah.in(0.3).less(0.1).toString()).to.eql('0.20');
   });
 
