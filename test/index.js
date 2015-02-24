@@ -48,16 +48,40 @@ describe('MiniMath library', function() {
     expect(moolah(0.1).plus(0.2).float()).to.eql(parseFloat(0.3));
   });
 
+  it('should add instances', function() {
+    var m1 = moolah(2);
+    var m2 = moolah(3);
+    expect(m1.plus(m2).float()).to.eql(5);
+  });
+
   it('should subtract', function() {
     expect(moolah(0.3).less(0.1).float()).to.eql(parseFloat(0.2));
+  });
+
+  it('should subtract instances', function() {
+    var m1 = moolah(5);
+    var m2 = moolah(3);
+    expect(m1.less(m2).float()).to.eql(2);
   });
 
   it('should multiply', function() {
     expect(moolah(10).times(2.5).float()).to.eql(25);
   });
 
+  it('should multiply instances', function() {
+    var m1 = moolah(5);
+    var m2 = moolah(3);
+    expect(m1.times(m2).float()).to.eql(15);
+  });
+
   it('should divide', function() {
     expect(moolah(50).by(2).float()).to.eql(25);
+  });
+
+  it('should divide instances', function() {
+    var m1 = moolah(6);
+    var m2 = moolah(3);
+    expect(m1.by(m2).float()).to.eql(2);
   });
 
   it('should handle non number', function() {

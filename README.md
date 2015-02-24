@@ -43,6 +43,9 @@ moolah(50).percent(20).float(); // 10
 // Return percentage discount using decimal
 moolah(50).percent(0.2).float(); // 10
 
+// Add, subtract, multiply or divide using instances
+moolah(10).plus(moolah(2)).float(); // 20
+
 // Process array of items and return total (initialized with 10)
 var items = [
  { cost: 45, qty: 3 },
