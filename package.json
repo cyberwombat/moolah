@@ -1,6 +1,6 @@
 {
   "name": "moolah",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Super simple math library for currency handling",
   "main": "index.js",
   "directories": {
