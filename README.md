@@ -51,7 +51,7 @@ var items = [
  { cost: 45, qty: 3 },
  { cost: 100, qty: 2 }
  ];
-var total = moolah.reduce(items, function(m, item) {
+var total = moolah().reduce(items, function(m, item) {
   return m(item.cost).times(item.qty);
 }, 10).float();  // 345
 ```
