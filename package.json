@@ -1,13 +1,16 @@
 {
   "name": "moolah",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Super simple math library for currency handling",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
+  "engines": {
+    "node": ">= 7.6.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava test/index.spec.js"
   },
   "author": "cyberwombat",
   "license": "ISC",
@@ -23,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/cyberwombat/moolah/issues"
   },
-  "homepage": "https://github.com/cyberwombat/moolah"
+  "homepage": "https://github.com/cyberwombat/moolah",
+  "devDependencies": {
+    "ava": "^0.24.0"
+  }
 }
